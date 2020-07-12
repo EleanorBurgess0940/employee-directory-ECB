@@ -4,7 +4,7 @@ import "./style.css";
 function Table({ employees }) {
   console.log(employees);
   return (
-    <table>
+    <table className="table">
       <thead>
         <tr>
           <th>Images</th>
@@ -12,6 +12,7 @@ function Table({ employees }) {
           <th>Phone</th>
           <th>Email</th>
           <th>DOB</th>
+          <th>Location</th>
         </tr>
       </thead>
       <tbody>
@@ -31,6 +32,9 @@ function Table({ employees }) {
                 <td>{employees.cell}</td>
                 <td>{employees.email}</td>
                 <td>{employees.dob.date}</td>
+                <td>
+                  {employees.location.city}, {employees.location.state}
+                </td>
               </tr>
             );
           })
